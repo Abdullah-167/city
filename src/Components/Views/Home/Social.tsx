@@ -11,10 +11,10 @@ const Social = () => {
                     <h2 className='text-5xl font-bold text-primary'>Get Social With Us</h2>
                     <Button text={'Explore Our Instagram'} display={''} />
                 </div>
-                <div className='grid grid-cols-4 gap-5 py-10'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 py-10'>
                     {data.map((item, index) => {
                         return (
-                            <Image className={''} src={item.img} alt={'card-img'} width={500} height={500} />
+                            <Image key={index} className={''} src={item.img} alt={'card-img'} width={500} height={500} />
                         )
                     })}
                 </div>

@@ -53,7 +53,7 @@ const Navbar = () => {
 
                         }
                     </div>
-                    <div className={`bg-primary w-full h-full absolute py-10 top-16 transition-all duration-700 shadow-2xl text-white z-[1000] ${toggelTab ? ' -translate-x-20 block' : ' -translate-x-[500px] opacity-0'}`}>
+                    <div className={`bg-primary w-full h-full absolute py-10 top-16 transition-all duration-700 shadow-2xl text-white z-[1000] ${toggelTab ? ' translate-x-0 block' : ' -translate-x-[500px] opacity-0'}`}>
                         {toggelTab && (
                             <div className='flex flex-col gap-16 items-center'>
                                 <ul className='flex flex-col gap-6 text-white text-xl'>

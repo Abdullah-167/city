@@ -18,14 +18,6 @@ const Discover = () => {
 
         },
 
-        breakpoints: {
-            "(max-width: 768px)": {
-                slides: 2,
-            },
-            "(max-width: 480px)": {
-                slides: 1,
-            },
-        },
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
         },
@@ -37,8 +29,8 @@ const Discover = () => {
 
     return (
         <section className=" relative py-10 overflow-hidden">
-            <div className="flex gap-8 items-center justify-between">
-                <div className="flex flex-col pl-52 max-w-[600px]">
+            <div className="flex flex-wrap lg:flex-nowrap gap-8 items-center justify-center lg:justify-between">
+                <div className="flex flex-col px-5 lg:pl-52 max-w-[600px]">
                     <h2 className='text-primary text-3xl sm:text-5xl font-extrabold pb-5'>Discover Downtown LA</h2>
                     <p className="text-black pb-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum.</p>
                     <div className="text-white">

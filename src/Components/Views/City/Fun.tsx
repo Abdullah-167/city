@@ -29,7 +29,7 @@ const Fun = () => {
 
     return (
         <Container>
-            <section className=" relative pb-32">
+            <section className=" relative sm:pb-32">
                 <h2 className='text-3xl sm:text-5xl text-primary font-extrabold pb-16'>Fun Things to Do</h2>
                 <div ref={sliderRef} className="keen-slider max-w-[800px] mx-auto">
                     {data.map((item, index) => {
