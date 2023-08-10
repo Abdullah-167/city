@@ -29,3 +29,8 @@ body {
 .social-bg {
   background: rgba(185, 70, 239, 0.22);
 }
+
+.modal-open {
+  overflow: hidden;
+}
+

@@ -6,17 +6,18 @@ import Image from "next/image"
 import { useState } from "react"
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 
-const ExMore = () => {
+const Discover = () => {
 
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
     const [sliderRef, instanceRef] = useKeenSlider({
 
         slides: {
-            perView: 3,
+            perView: 2,
             spacing: 10,
 
         },
+
         breakpoints: {
             "(max-width: 768px)": {
                 slides: 2,
@@ -35,56 +36,52 @@ const ExMore = () => {
     })
 
     return (
-        <section className=" relative py-32">
-            <div className=" pt-10 mb-10 h-52 bg-[#FFC6F2] text-white ">
-                <Container>
-                    <div className="flex justify-between border-b-[2px] border-b-primary">
-                        <h2 className='text-primary text-3xl sm:text-5xl font-extrabold pb-5'>Explore More Hotels</h2>
-                        <div>
-                            {loaded && instanceRef.current && (
-                                <div className="flex gap-4">
-                                    <span className="">
-                                        <Arrow
-                                            left
-                                            onClick={(e: any) =>
-                                                e.stopPropagation() || instanceRef.current?.prev()
-                                            }
-                                            disabled={currentSlide === 0}
-                                        />
-                                    </span>
-
+        <section className=" relative py-10 overflow-hidden">
+            <div className="flex gap-8 items-center justify-between">
+                <div className="flex flex-col pl-52 max-w-[600px]">
+                    <h2 className='text-primary text-3xl sm:text-5xl font-extrabold pb-5'>Discover Downtown LA</h2>
+                    <p className="text-black pb-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum.</p>
+                    <div className="text-white">
+                        {loaded && instanceRef.current && (
+                            <div className="flex gap-4">
+                                <span className="">
                                     <Arrow
+                                        left
                                         onClick={(e: any) =>
-                                            e.stopPropagation() || instanceRef.current?.next()
+                                            e.stopPropagation() || instanceRef.current?.prev()
                                         }
-                                        disabled={
-                                            currentSlide ===
-                                            instanceRef.current.track.details.slides.length - 1
-                                        }
+                                        disabled={currentSlide === 0}
                                     />
-                                </div>
-                            )}
-                        </div>
+                                </span>
+
+                                <Arrow
+                                    onClick={(e: any) =>
+                                        e.stopPropagation() || instanceRef.current?.next()
+                                    }
+                                    disabled={
+                                        currentSlide ===
+                                        instanceRef.current.track.details.slides.length - 1
+                                    }
+                                />
+                            </div>
+                        )}
                     </div>
-                </Container>
-            </div>
-            <Container>
-                <div ref={sliderRef} className="keen-slider -mt-20">
+                </div>
+                <div ref={sliderRef} className="keen-slider max-w-[550px] overflow-hidden -mr-20">
                     {data.map((item, index) => {
                         return (
                             <div key={index} className="keen-slider__slide relative">
-                                <Image src={item.img} alt={"slider-images"} width={1000} height={1000} />
-                                <p className=" text-white absolute bottom-5 px-3 text-2xl text-center font-bold py-1">{item.text}</p>
+                                <Image className="h-[250px]" src={item.img} alt={"slider-images"} width={1000} height={1000} />
                             </div>
                         )
                     })}
                 </div>
-            </Container>
+            </div>
         </section>
     )
 }
 
-export default ExMore;
+export default Discover;
 
 
 
@@ -130,7 +127,7 @@ function Arrow(props: any) {
     const disabeld = props.disabled ? " arrow--disabled" : ""
     return (
         <div onClick={props.onClick}
-            className={`max-w-[40px] bg-primary rounded-full p-3 cursor-pointer flex justify-center items-center ${props.left ? "arrow--left" : "arrow--right -right-4 "
+            className={`max-w-[40px]  rounded-full p-3 cursor-pointer flex justify-center items-center ${props.left ? "arrow--left bg-tertiary" : "arrow--right -right-4 bg-primary"
                 } ${disabeld}`}
         >
             {props.left && (
