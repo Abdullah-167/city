@@ -8,17 +8,17 @@ const Explore = () => {
         <section className='bg-primary py-20'>
             <Container>
                 <div className='flex text-white justify-between pb-7'>
-                    <h2 className='text-5xl font-bold'>More to Explore</h2>
-                    <div className='text-lg flex gap-2 items-center cursor-pointer'>
+                    <h2 className='text-3xl sm:text-5xl font-bold'>More to Explore</h2>
+                    <div className='smtext-lg flex gap-1 sm:gap-2 items-center cursor-pointer'>
                         <span>View all</span>
                         <span><Image src={'/arrow.svg'} alt={''} width={25} height={25} /></span>
                     </div>
                 </div>
-                <div className=' flex gap-5'>
+                <div className='flex justify-center flex-wrap md:flex-nowrap gap-5'>
                     {data.map((item, index) => {
                         return (
                             <div className=' relative' key={index}>
-                                <Image className='' src={item.img} alt={'card-img'} width={500} height={500} />
+                                <Image className='w-full' src={item.img} alt={'card-img'} width={500} height={500} />
                                 <span className='bg-white absolute top-4 right-4 rounded-full w-8 h-8 flex  justify-center items-center cursor-pointer text-xl'>{item.icon}</span>
                                 <p className='text-base text-center bg-white px-4 py-4'>{item.text}</p>
                             </div>

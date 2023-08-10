@@ -19,3 +19,8 @@ body {
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
 }
+
+
+.colr-change:hover>div>h2 {
+  color: #EF46CA;
+}

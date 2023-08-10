@@ -6,6 +6,9 @@ import Ultimate from './Ultimate'
 import Explore from './Explore'
 import TopDest from './Topdest'
 import Beaches from './Beaches'
+import Latest from './Latest'
+import ExMore from './ExMore'
+import LaHeight from './LaHeight'
 
 const Home = () => {
     return (
@@ -17,6 +20,9 @@ const Home = () => {
             <Explore />
             <TopDest />
             <Beaches />
+            <Latest />
+            <ExMore />
+            <LaHeight />
         </div>
     )
 }
