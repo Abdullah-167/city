@@ -24,3 +24,8 @@ body {
 .colr-change:hover>div>h2 {
   color: #EF46CA;
 }
+
+
+.social-bg {
+  background: rgba(185, 70, 239, 0.22);
+}

@@ -4,7 +4,7 @@ import React from 'react'
 
 const Latest = () => {
     return (
-        <section>
+        <section className='py-16'>
             <Container>
                 <div>
                     <h2 className='text-5xl text-primary font-bold pb-10'>Latest News</h2>

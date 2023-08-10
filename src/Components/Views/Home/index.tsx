@@ -9,6 +9,7 @@ import Beaches from './Beaches'
 import Latest from './Latest'
 import ExMore from './ExMore'
 import LaHeight from './LaHeight'
+import Social from './Social'
 
 const Home = () => {
     return (
@@ -23,6 +24,7 @@ const Home = () => {
             <Latest />
             <ExMore />
             <LaHeight />
+            <Social />
         </div>
     )
 }
