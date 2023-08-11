@@ -7,7 +7,7 @@ const La12 = () => {
     return (
         <section>
             <Container>
-                <div>
+                <div className='pb-14'>
                     {data.map((item, index) => {
                         return (
                             <div key={index} className={`flex flex-wrap lg:flex-nowrap items-center py-12 ${index === 1 ? ' flex-row-reverse' : ' flex-row'}`}>

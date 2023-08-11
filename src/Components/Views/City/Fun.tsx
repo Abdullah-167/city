@@ -12,10 +12,17 @@ const Fun = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
     const [loaded, setLoaded] = useState(false)
     const [sliderRef, instanceRef] = useKeenSlider({
+        breakpoints: {
+            "(min-width: 500px)": {
+                slides: { perView: 2, spacing: 5 },
+            },
+            "(min-width: 1024px)": {
+                slides: { perView: 3, spacing: 10 },
+            },
+        },
         slides: {
-            perView: 3,
+            perView: 1,
             spacing: 10,
-
         },
 
         slideChanged(slider) {
@@ -118,16 +125,29 @@ const data = [
 function Arrow(props: any) {
     const disabeld = props.disabled ? " arrow--disabled" : ""
     return (
-        <div onClick={props.onClick}
-            className={`max-w-[40px] bg-primary text-white rounded-full p-3 cursor-pointer flex justify-center items-center absolute ${props.left ? "arrow--left left-10 top-[310px]" : "arrow--right right-10 top-[310px] "
-                } ${disabeld}`}
-        >
-            {props.left && (
-                <span>  <AiOutlineArrowLeft /> </span>
-            )}
-            {!props.left && (
-                <span> <AiOutlineArrowRight /></span>
-            )}
+        <div>
+            <div onClick={props.onClick}
+                className={`max-w-[40px] bg-primary text-white rounded-full p-3 cursor-pointer hidden lg:flex justify-center items-center absolute ${props.left ? "arrow--left left-10 top-[310px]" : "arrow--right right-10 top-[310px] "
+                    } ${disabeld}`}
+            >
+                {props.left && (
+                    <span>  <AiOutlineArrowLeft /> </span>
+                )}
+                {!props.left && (
+                    <span> <AiOutlineArrowRight /></span>
+                )}
+            </div>
+            <div onClick={props.onClick}
+                className={`max-w-[40px] bg-primary text-white lg:hidden rounded-full p-3 cursor-pointer flex justify-center items-center absolute ${props.left ? "arrow--left left-2 sm:left-10 top-12" : "arrow--right left-14 lg:left-24 top-12 "
+                    } ${disabeld}`}
+            >
+                {props.left && (
+                    <span>  <AiOutlineArrowLeft /> </span>
+                )}
+                {!props.left && (
+                    <span> <AiOutlineArrowRight /></span>
+                )}
+            </div>
         </div>
     )
 }

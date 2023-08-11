@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Places = () => {
     return (
-        <section className='py-20'>
+        <section className='py-8 sm:py-20'>
             <Container>
                 <div className='py-10'>
                     <h1 className='text-3xl sm:text-5xl text-primary font-bold pb-20'>Best Places to Stay in LA</h1>
