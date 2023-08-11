@@ -28,7 +28,7 @@ const Discover = () => {
     })
 
     return (
-        <section className=" relative py-10 overflow-hidden">
+        <section className=" relative py-10 overflow-hidden max-w-[1350px] mx-auto">
             <div className="flex flex-wrap lg:flex-nowrap gap-8 items-center justify-center lg:justify-between">
                 <div className="flex flex-col px-5 lg:pl-52 max-w-[600px]">
                     <h2 className='text-primary text-3xl sm:text-5xl font-extrabold pb-5'>Discover Downtown LA</h2>
@@ -119,7 +119,7 @@ function Arrow(props: any) {
     const disabeld = props.disabled ? " arrow--disabled" : ""
     return (
         <div onClick={props.onClick}
-            className={`max-w-[40px]  rounded-full p-3 cursor-pointer flex justify-center items-center ${props.left ? "arrow--left bg-tertiary" : "arrow--right -right-4 bg-primary"
+            className={`max-w-[40px] rounded-full p-3 cursor-pointer flex justify-center items-center ${props.left ? "arrow--left bg-tertiary" : "arrow--right -right-4 bg-primary"
                 } ${disabeld}`}
         >
             {props.left && (

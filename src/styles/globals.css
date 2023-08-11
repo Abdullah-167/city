@@ -34,3 +34,6 @@ body {
   overflow: hidden;
 }
 
+.srollBar {
+   scrollbar-width: none;
+}
