@@ -11,7 +11,7 @@ const Latest = () => {
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                         {data.map((item, index) => {
                             return (
-                                <div className='colr-change flex sm:flex-row flex-col items-center gap-4 border-b-[1.5px] border-b-primary hover:border-b-[#EF46CA] transition-all duration-300  pb-5'>
+                                <div key={index} className='colr-change flex sm:flex-row flex-col items-center gap-4 border-b-[1.5px] border-b-primary hover:border-b-[#EF46CA] transition-all duration-300  pb-5'>
                                     <Image src={item.img} alt={'blog-img'} width={600} height={600} />
                                     <div>
                                         <h2 className='text-2xl font-bold text-primary cursor-pointer'>

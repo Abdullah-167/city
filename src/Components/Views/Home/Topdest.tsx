@@ -38,7 +38,7 @@ const TopDest = () => {
         <Container>
             <section className=" relative py-32">
                 <h2 className='text-3xl sm:text-5xl text-primary font-extrabold pb-5'>Top Things to Do By Category</h2>
-                <p className='text-xl max-w-[492px] pb-16'>Travelers' Choice Best of the Best Locations Within the United States</p>
+                <p className='text-xl max-w-[492px] pb-16'>{`Travelers' Choice Best of the Best Locations Within the United State`}s</p>
                 <div ref={sliderRef} className="keen-slider">
                     {data.map((item, index) => {
                         return (

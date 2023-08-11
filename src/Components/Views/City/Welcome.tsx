@@ -10,7 +10,7 @@ const Welcome = () => {
             <Container>
                 <h2 className='text-3xl sm:text-6xl text-center font-bold text-primary max-w-[968px] mx-auto pb-10 sm:pb-20'>WE LOOK FORWARD TO WELCOMING YOU</h2>
                 <div className='py-10'>
-                    <h1 className='text-3xl sm:text-5xl text-primary font-bold pb-10 sm:pb-20'>What's Hot Today</h1>
+                    <h1 className='text-3xl sm:text-5xl text-primary font-bold pb-10 sm:pb-20'>{`What's Hot Today`}</h1>
                     <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-10'>
                         {data.map((item, index) => {
                             return (
